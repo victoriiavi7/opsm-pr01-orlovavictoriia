@@ -1,0 +1,34 @@
+; <<>> DiG 9.10.6 <<>> openwrt.org
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 29275
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;openwrt.org.			IN	A
+
+;; ANSWER SECTION:
+openwrt.org.		3039	IN	A	64.226.122.113
+
+;; Query time: 5 msec
+;; SERVER: 192.168.88.1#53(192.168.88.1)
+;; WHEN: Sat Sep 12 13:33:56 EEST 2026
+;; MSG SIZE  rcvd: 45
+
+
+; <<>> DiG 9.10.6 <<>> openwrt.org
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25878
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;openwrt.org.			IN	A
+
+;; ANSWER SECTION:
+openwrt.org.		2719	IN	A	64.226.122.113
+
+;; Query time: 3 msec
+;; SERVER: 192.168.88.1#53(192.168.88.1)
+;; WHEN: Sat Sep 12 13:39:16 EEST 2026
+;; MSG SIZE  rcvd: 45

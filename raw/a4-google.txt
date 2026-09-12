@@ -1,0 +1,58 @@
+* Host google.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 172.217.17.78
+*   Trying 172.217.17.78:443...
+* Connected to google.com (172.217.17.78) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+* (304) (IN), TLS handshake, Unknown (8):
+* (304) (IN), TLS handshake, Certificate (11):
+* (304) (IN), TLS handshake, CERT verify (15):
+* (304) (IN), TLS handshake, Finished (20):
+* (304) (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=*.google.com
+*  start date: Aug 10 08:37:35 2026 GMT
+*  expire date: Nov  2 08:37:34 2026 GMT
+*  subjectAltName: host "google.com" matched cert's "google.com"
+*  issuer: C=US; O=Google Trust Services; CN=WR2
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://google.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: google.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: google.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+>
+* Request completely sent off
+< HTTP/2 301
+< location: https://www.google.com/
+< content-type: text/html; charset=UTF-8
+< content-security-policy-report-only: object-src 'none';base-uri 'self';script-src 'nonce-AfSQ9TBzG5Z6qx4Kqd1bcw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+< date: Sat, 12 Sep 2026 10:34:40 GMT
+< expires: Mon, 12 Oct 2026 10:34:40 GMT
+< cache-control: public, max-age=2592000
+< server: gws
+< content-length: 220
+< x-xss-protection: 0
+< x-frame-options: SAMEORIGIN
+< alt-svc: h3=":443"; ma=2592000,h3-29=":443"
+<
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="https://www.google.com/">here</A>.
+</BODY></HTML>
+* Connection #0 to host google.com left intact

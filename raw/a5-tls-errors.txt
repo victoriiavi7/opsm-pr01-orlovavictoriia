@@ -1,0 +1,91 @@
+=== expired.badssl.com ===
+
+* Host expired.badssl.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 104.154.89.105
+*   Trying 104.154.89.105:443...
+* Connected to expired.badssl.com (104.154.89.105) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (OUT), TLS alert, certificate expired (557):
+* SSL certificate problem: certificate has expired
+* Closing connection
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (OUT), TLS alert, certificate expired (557):
+curl: (60) SSL certificate problem: certificate has expired
+
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the web page mentioned above.
+
+
+=== wrong.host.badssl.com ===
+
+* Host wrong.host.badssl.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 104.154.89.105
+*   Trying 104.154.89.105:443...
+* Connected to wrong.host.badssl.com (104.154.89.105) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=*.badssl.com
+*  start date: Jul 28 20:03:02 2026 GMT
+*  expire date: Oct 26 20:03:01 2026 GMT
+*  subjectAltName does not match host name wrong.host.badssl.com
+* SSL: no alternative certificate subject name matches target host name 'wrong.host.badssl.com'
+* Closing connection
+* TLSv1.2 (OUT), TLS alert, close notify (256):
+curl: (60) SSL: no alternative certificate subject name matches target host name 'wrong.host.badssl.com'
+
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the web page mentioned above.
+
+
+=== self-signed.badssl.com ===
+
+* Host self-signed.badssl.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 104.154.89.105
+*   Trying 104.154.89.105:443...
+* Connected to self-signed.badssl.com (104.154.89.105) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (OUT), TLS alert, unknown CA (560):
+* SSL certificate problem: self signed certificate
+* Closing connection
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (OUT), TLS alert, unknown CA (560):
+curl: (60) SSL certificate problem: self signed certificate
+
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the web page mentioned above.
