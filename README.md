@@ -1,4 +1,5 @@
 # opsm-pr01-orlovavictoriia
+
 # Практична робота № 1
 
 **Дисципліна:** Основи побудови інформаційних систем та мереж
@@ -27,7 +28,7 @@
 curl -v openwrt.org
 ```
 
-**Вивід:**
+**Вивід:** [a1-curl-https.txt](raw/a1-curl-https.txt)
 
 ```text
 * Host openwrt.org:80 was resolved.
@@ -69,7 +70,7 @@ curl -v openwrt.org
 curl -v "http://neverssl.com"
 ```
 
-**Вивід:**
+**Вивід:** [a2-curl-http.txt](raw/a2-curl-http.txt)
 
 ```text
 * Host neverssl.com:80 was resolved.
@@ -229,7 +230,7 @@ curl -v "http://neverssl.com"
 dig openwrt.org
 ```
 
-**Вивід:**
+**Вивід:** [a3-dig.txt](raw/a3-dig.txt)
 
 ```text
 ; <<>> DiG 9.10.6 <<>> openwrt.org
@@ -256,7 +257,7 @@ openwrt.org.            3039    IN      A       64.226.122.113
 dig openwrt.org
 ```
 
-**Вивід:**
+**Вивід:** [a3-dig.txt](raw/a3-dig.txt)
 
 ```text
 ; <<>> DiG 9.10.6 <<>> openwrt.org
@@ -295,7 +296,7 @@ openwrt.org.            2719    IN      A       64.226.122.113
 curl -v "https://google.com"
 ```
 
-**Вивід:**
+**Вивід:** [a4-google.txt](raw/a4-google.txt)
 
 ```text
 * Host google.com:443 was resolved.
@@ -370,7 +371,7 @@ The document has moved
 curl -v "https://expired.badssl.com"
 ```
 
-**Вивід:**
+**Вивід:** [a5-tls-errors.txt](raw/a5-tls-errors.txt)
 
 ```text
 * Host expired.badssl.com:443 was resolved.
@@ -406,7 +407,7 @@ how to fix it, please visit the web page mentioned above.
 curl -v "https://wrong.host.badssl.com"
 ```
 
-**Вивід:**
+**Вивід:** [a5-tls-errors.txt](raw/a5-tls-errors.txt)
 
 ```text
 * Host wrong.host.badssl.com:443 was resolved.
@@ -420,13 +421,13 @@ curl -v "https://wrong.host.badssl.com"
 *  CApath: none
 * (304) (IN), TLS handshake, Server hello (2):
 * TLSv1.2 (IN), TLS handshake, Certificate (11):
-* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (OUT), TLS handshake, Server key exchange (12):
 * TLSv1.2 (IN), TLS handshake, Server finished (14):
 * TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
 * TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
 * TLSv1.2 (OUT), TLS handshake, Finished (20):
 * TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
-* TLSv1.2 (IN), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS handshake, Finished (14):
 * SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF
 * ALPN: server accepted http/1.1
 * Server certificate:
@@ -454,7 +455,7 @@ how to fix it, please visit the web page mentioned above.
 curl -v "https://self-signed.badssl.com"
 ```
 
-**Вивід:**
+**Вивід:** [a5-tls-errors.txt](raw/a5-tls-errors.txt)
 
 ```text
 * Host self-signed.badssl.com:443 was resolved.
@@ -556,6 +557,4 @@ how to fix it, please visit the web page mentioned above.
 
 ## D.3. Питання, яке залишилося без відповіді
 
-> Залишилося питання, чому для `openwrt.org` та `google.com` curl у моєму середовищі показує відсутність IPv6 (`IPv6: (none)`), хоча сучасні вебресурси можуть підтримувати IPv6. 
-
----
+> Залишилося питання, чому для `openwrt.org` та `google.com` curl у моєму середовищі показує відсутність IPv6 (`IPv6: (none)`), хоча сучасні вебресурси можуть підтримувати IPv6.
